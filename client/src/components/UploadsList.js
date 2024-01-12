@@ -27,6 +27,7 @@ const UploadsList = ({ medias }) => {
                             height="240"
                             controls
                           >
+                            console.log(`${BACKEND_URI}${video}`)
                             <source src={`${BACKEND_URI}${video}`} />
                             ;Your browser does not support the video tag.
                           </video>

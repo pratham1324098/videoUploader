@@ -65,3 +65,4 @@ const UploadForm = ({ getAllMedias }) => {
 };
 
 export default UploadForm;
+

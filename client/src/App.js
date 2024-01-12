@@ -27,34 +27,28 @@ const App = () => {
 
   return (
     <>
-      <div className="row">
-        <div className="col-md-6">
-          <div
-            className="card"
-            style={{
-              height: "auto",
-              width: "800px",
-              margin: "40px",
-              border: "1px solid black",
-            }}
-          >
-            <div className="card-body">
-              <UploadForm getAllMedias={getAllMedias} />
+      <div className="App">
+        <div className="container mt-5">
+          <div className="row">
+            <div className="col-md-6 offset-md-3">
+              <div className="card shadow">
+                <div className="card-body">
+                  <h3 className="card-title text-center mb-4">Upload Your Media</h3>
+                  <UploadForm getAllMedias={getAllMedias} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="col-md-6">
-          <div
-            className="card"
-            style={{
-              height: "auto",
-              width: "800px",
-              margin: "40px",
-              border: "1px solid black",
-            }}
-          >
-            <div className="card-body">
-              <UploadsList medias={medias} />
+        <div className="container mt-5">
+          <div className="row">
+            <div className="col-md-6 offset-md-3">
+              <div className="card shadow">
+                <div className="card-body">
+                  <h3 className="card-title text-center mb-4">Uploaded Media</h3>
+                  <UploadsList medias={medias} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
