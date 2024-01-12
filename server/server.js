@@ -11,13 +11,13 @@ dotenv.config();
 app.use(express.json())
 app.use(cors());
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname,'./client/build')))
+app.use(express.static(path.join(__dirname,'../client/build')))
 
 app.get("*",function(req,res){
-    res.sendFile(express.static(path.join(__dirname,"./client/build")))
+    res.sendFile(express.static(path.join(__dirname,"../client/build")))
 })
 app.use("/api/v1/media",require("./Routes/Media"))
-app.use("/public", express.static(path.join(__dirname, "public")));
+app.use("/public", express.static(path.join(__dirname, "../client/public/index.html")));
 const port = process.env.PORT;
 connectDb();
 app.listen(port,()=>{
